@@ -19,12 +19,18 @@
     <meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description" content="ครอบครัวเพื่อไทย รวมพลังประชาชนครั้งประวัติศาสตร์">
     <meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://family.ptp.or.th/images/share.jpg">
     <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://family.ptp.or.th/favicon.ico">
-  <style type="text/css">.__nuxt-error-page{padding:1rem;background:#f7f8fb;color:#47494e;text-align:center;display:flex;justify-content:center;align-items:center;flex-direction:column;font-family:sans-serif;font-weight:100!important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;position:absolute;top:0;left:0;right:0;bottom:0}.__nuxt-error-page .error{max-width:450px}.__nuxt-error-page .title{font-size:1.5rem;margin-top:15px;color:#47494e;margin-bottom:8px}.__nuxt-error-page .description{color:#7f828b;line-height:21px;margin-bottom:10px}.__nuxt-error-page a{color:#7f828b!important;text-decoration:none}.__nuxt-error-page .logo{position:fixed;left:12px;bottom:12px}</style>
-    <style type="text/css">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:3px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#ff3232;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>
-    <style type="text/css">@import url(https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap);</style>
     <link rel="stylesheet" href="https://pheuthai.pages.dev/style.css">
     <link href="https://www.google-analytics.com" rel="preconnect">
     <style data-styled="active" data-styled-version="5.3.10"></style>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcycgQqAAAAANailot6l3OSFjm6k1TA6nT2rF2n"></script>
+    <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.enterprise.ready(async () => {
+          const token = await grecaptcha.enterprise.execute('6LcycgQqAAAAANailot6l3OSFjm6k1TA6nT2rF2n', {action: 'LOGIN'});
+        });
+      }
+    </script>
     <style>
 
 .bg-black {
@@ -139,3 +145,7 @@
 </script>
   </body>
 </html>
+
+<style type="text/css">.__nuxt-error-page{padding:1rem;background:#f7f8fb;color:#47494e;text-align:center;display:flex;justify-content:center;align-items:center;flex-direction:column;font-family:sans-serif;font-weight:100!important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;position:absolute;top:0;left:0;right:0;bottom:0}.__nuxt-error-page .error{max-width:450px}.__nuxt-error-page .title{font-size:1.5rem;margin-top:15px;color:#47494e;margin-bottom:8px}.__nuxt-error-page .description{color:#7f828b;line-height:21px;margin-bottom:10px}.__nuxt-error-page a{color:#7f828b!important;text-decoration:none}.__nuxt-error-page .logo{position:fixed;left:12px;bottom:12px}</style>
+<style type="text/css">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:3px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#ff3232;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>
+<style type="text/css">@import url(https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap);</style>
