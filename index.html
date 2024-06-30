@@ -33,6 +33,44 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
    </script>
+    <script>
+        google.script.run.withSuccessHandler(function(url) {
+            var uiConfig = {
+                signInFlow: 'popup',
+                signInSuccessUrl: url,
+                signInOptions: [
+                    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                    firebase.auth.EmailAuthProvider.PROVIDER_ID
+                ],
+            };
+            var ui = new firebaseui.auth.AuthUI(firebase.auth());
+            var user = firebase.auth().currentUser;
+            if (user) {
+               window.open('https://www.youtube.com');
+                document.getElementById("signOut").style.display = "inline-block";
+            } else {
+                ui.start('#firebaseui-auth-container', uiConfig);
+            }
+        }).webAppUrl();
+    </script>
+    <script>
+        initApp = function() {
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                  
+                    user.getIdToken().then(function(accessToken) {})
+
+                } else {
+                    document.getElementById('account-details').textContent = '';
+                }
+            });
+        };
+        window.addEventListener('load', function() {
+            initApp();
+            
+        });
+    </script>
     
     <style>
 
