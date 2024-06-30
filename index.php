@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
-<script src="App.js"></script>
+<title>OTP Veriication</title>
 </head>
 <body>
   
