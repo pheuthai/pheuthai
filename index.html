@@ -86,15 +86,13 @@
     </div></div></div> 
         <div>
           <span>
-            <form class="flex flex-col items-center py-8 lg:py-16" onsubmit="return validateForm()">
+            <form class="flex flex-col items-center py-8 lg:py-16" action="https://forms.gle/hB7DfbsERt6cWyPT8" method="POST">
               <div>
               <div>กรอกเบอร์โทรศัพท์เพื่อเข้าระบบ</div> 
               <span>
                 <div><!----> 
-                  <input type="text" name="mobile" placeholder="000-000-0000" inputmode="numeric" class="form-control block w-64"> 
-                  <!---->
-                  <small id="errorText" class="text-red-700 hidden">กรุณากรอก เบอร์โทรศัพท์</small>
                   <div class="g-recaptcha" data-sitekey="6LcAmwQqAAAAACRFe1337KvJdGm02is9M2-8qX07"></div>
+                  <br/>
                 </div>
               </span>
             </div> <!----> 
@@ -102,7 +100,9 @@
                 <div class="flex flex-col items-center mt-6">
                   <button to="" type="submit" class="btn px-4 btn-primary">
                     <div class="flex items-center"><!----> 
-                      <span>ดำเนินการต่อ</span>
+                      <span>
+                  <input type="submit" value="Submit">
+                      </span>
                     </div>
                   </button>
                 </div>
