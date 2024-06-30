@@ -20,8 +20,13 @@
     <meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://family.ptp.or.th/images/share.jpg">
     <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://family.ptp.or.th/favicon.ico">
     <link rel="stylesheet" href="https://pheuthai.pages.dev/style.css">
-    <link href="https://www.google-analytics.com" rel="preconnect">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script src="https://www.google.com/recaptcha/api.js"></script>
+     <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+   </script>
+    
     <style>
 
 .bg-black {
@@ -81,7 +86,10 @@
               <div>กรอกเบอร์โทรศัพท์เพื่อเข้าระบบ</div> 
               <span>
                 <div><!----> 
-                  <div class="g-recaptcha" data-sitekey="6LcAmwQqAAAAACRFe1337KvJdGm02is9M2-8qX07"></div>
+                  <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
                   <br/>
                 </div>
               </span>
