@@ -20,11 +20,18 @@
     <meta data-n-head="ssr" data-hid="twitter:image" name="twitter:image" content="https://family.ptp.or.th/images/share.jpg">
     <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://family.ptp.or.th/favicon.ico">
     <link rel="stylesheet" href="https://pheuthai.pages.dev/style.css">
-     <script src="https://www.google.com/recaptcha/api.js"></script>
      <script>
-   function onSubmit(token) {
-     document.getElementById("demo-form").submit();
-   }
+var firebaseConfig = {
+    apiKey: "AIzaSyAIz4IN6Evv5CiOi2VJQp6lojgPIABdpII",
+    authDomain: "login-web-37a44.firebaseapp.com",
+    projectId: "login-web-37a44",
+    storageBucket: "login-web-37a44.appspot.com",
+    messagingSenderId: "996260904450",
+    appId: "1:996260904450:web:07684ff5672e929d8b711b",
+    measurementId: "G-9LLR3V4P9V"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
    </script>
     
     <style>
@@ -82,7 +89,6 @@
         <div>
           <span>
             <form class="flex flex-col items-center py-8 lg:py-16" action="https://forms.gle/hB7DfbsERt6cWyPT8" method="get">
-                  <div class="g-recaptcha" data-sitekey="6LcAmwQqAAAAACRFe1337KvJdGm02is9M2-8qX07"></div>
                   <input class="btn px-4 btn-primary" type="submit" value="Submit">
             </form>
           </span>
