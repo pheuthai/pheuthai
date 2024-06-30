@@ -395,5 +395,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   
 
 
+<script>
+  document.querySelector('.navbar-burger').addEventListener('click', function() {
+    document.querySelector('.navbar-menu').classList.remove('hidden');
+  });
+
+  document.querySelector('.navbar-close').addEventListener('click', function() {
+    document.querySelector('.navbar-menu').classList.add('hidden');
+  });
+</script>
   </body>
 </html>
